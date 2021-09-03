@@ -5,10 +5,6 @@ const setCounter = document.querySelector('.set');
 const show = document.querySelector('.show');
 const decrease = document.querySelector('.decrease');
 
-//increase.addEventListener('click', counter);
-setCounter.addEventListener('click', counter.set);
-show.addEventListener('click', counter.show);
-decrease.addEventListener('click', counter.decrease);
 
 function makeCounter() {
   let currentCount = 0;
@@ -18,13 +14,21 @@ function makeCounter() {
   };
   
   counter.show = function() {
-    return console.log(44); 
+    console.log(currentCount); 
   };
 
-  return currentCount;
+  return counter;
 }
 
 let counter = makeCounter();
 
 //counter.show();
 console.log();
+
+function inc() {
+  console.log(33)
+}
+increase.addEventListener('click', counter);
+setCounter.addEventListener('click', counter.set);
+show.addEventListener('click', counter.show);
+decrease.addEventListener('click', counter.decrease);
